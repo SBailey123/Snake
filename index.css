@@ -1,0 +1,43 @@
+html, body {
+    margin: 0 auto;
+    padding: 10;
+    align-items: center;
+    font-size: 1rem;
+    background: linear-gradient(to top left, grey, white)
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+    border: solid 2px black;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+}
+
+.snake {
+    background: linear-gradient(to left, rgba(23, 94, 40, 0.637), rgba(48, 40, 20, 0.637));
+    border-radius: 30%;
+}
+
+
+.apple {
+    background: linear-gradient(to top, rgb(204, 46, 34), rgb(3, 95, 3));
+    border-radius: 36% 36% 41% 41% / 42% 42% 75% 75%;
+}
+
+button {
+    font-size: 1.2em;
+    border: solid 2px rgb(13, 114, 67);
+    padding: 1em;
+    border-radius: 15px;
+
+}
