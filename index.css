@@ -1,13 +1,38 @@
+:root {
+    --light: rgb(209, 226, 215);
+    --dark: rgb(23, 29, 24);
+    --highlight: #0cb60c;
+    --lowlight: #063f09;
+}
+
+
+
 html, body {
     margin: 0 auto;
-    padding: 10;
-    align-items: center;
-    font-size: 1rem;
-    background: linear-gradient(to top left, grey, white)
+    padding: 0;
+    background: var(--light);
+    align-content: center;
 }
 
 body {
     font-family: 'Heebo', sans-serif;
+    text-align: center;
+}
+
+header {
+    background: var(--lowlight);   
+    padding: .5em;
+}
+
+h1 {
+    font-size: 2.3rem;
+    color: var(--light)
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .grid {
@@ -15,7 +40,8 @@ body {
     flex-wrap: wrap;
     width: 200px;
     height: 200px;
-    border: solid 2px black;
+    border: solid 3px var(--dark);
+    margin: 0 auto;
 }
 
 .square {
@@ -24,10 +50,9 @@ body {
 }
 
 .snake {
-    background: linear-gradient(to left, rgba(23, 94, 40, 0.637), rgba(48, 40, 20, 0.637));
-    border-radius: 30%;
+    background: var(--lowlight);
+    border-radius: 15%;
 }
-
 
 .apple {
     background: linear-gradient(to top, rgb(204, 46, 34), rgb(3, 95, 3));
@@ -36,8 +61,17 @@ body {
 
 button {
     font-size: 1.2em;
-    border: solid 2px rgb(13, 114, 67);
-    padding: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
     border-radius: 15px;
+    padding: .4em .6em .4em;
+    background-color: var(--highlight);
+    margin-top: 1em;
+    cursor: pointer;
+}
 
+button:hover,
+button:focus {
+    background-color: var(--dark);
+    color: var(--light)
 }
