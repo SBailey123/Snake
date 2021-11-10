@@ -26,6 +26,7 @@ function createGrid() {
 }
 createGrid()
 
+
 currentSnake.forEach(index => squares[index].classList.add('snake'))
 
 function startGame() {
@@ -43,8 +44,16 @@ function startGame() {
     generateApple()
     //readd the class of snake to our new currentSnake
     currentSnake.forEach(index => squares[index].classList.add('snake'))
-    timerId = setInterval(move, intervalTime)
+    timerId = setInterval(move, intervalTime)  
 }
+
+startButton.addEventListener("click", () => {
+    if(startButton.textContent === "Start") {
+        startButton.textContent = "Restart";
+    } else {
+        startButton.textContent = "Start";
+    }
+})
 
 function move() {
     if (
@@ -123,3 +132,4 @@ function control(e) {
 }
 document.addEventListener('keyup', control)
 startButton.addEventListener('click', startGame)
+
